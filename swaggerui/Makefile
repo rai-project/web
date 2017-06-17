@@ -14,6 +14,9 @@ swagger-ui:
 	unzip /tmp/swagger-ui.zip swagger-ui-*/dist/* -d /tmp/swagger-ui
 	mv /tmp/swagger-ui/swagger-ui-*/dist/* swagger-ui/
 	rm -fr /tmp/swagger-ui
+	sed -i'' -e 's/http:\/\/petstore.swagger.io\/v2\/swagger.json/\/api\/v1\/swagger.json/g' swagger-ui/swagger-ui-standalone-preset.js
+	sed -i'' -e 's/http:\/\/petstore.swagger.io\/v2\/swagger.json/\/api\/v1\/swagger.json/g' swagger-ui/index.html
+	rm -fr swagger-ui/*-e
 
 clean:
 	rm -r swagger_ui_resources.go
