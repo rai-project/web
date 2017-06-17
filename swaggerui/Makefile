@@ -11,9 +11,9 @@ swagger_ui_resources.go: swagger-ui
 swagger-ui:
 	curl -sSL https://github.com/swagger-api/swagger-ui/archive/v3.0.14.zip > /tmp/swagger-ui.zip
 	mkdir -p $@
-	unzip /tmp/swagger-ui.zip swagger-ui-*/dist/* -d $@
-	mv swagger-ui/swagger-ui-*/dist/* swagger-ui/
-	rm -r swagger-ui/swagger-ui-*
+	unzip /tmp/swagger-ui.zip swagger-ui-*/dist/* -d /tmp/swagger-ui
+	mv /tmp/swagger-ui/swagger-ui-*/dist/* swagger-ui/
+	rm -fr /tmp/swagger-ui
 
 clean:
 	rm -r swagger_ui_resources.go
