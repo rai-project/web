@@ -14,7 +14,7 @@ checkout-ui:
 jaeger-ui-build:
 	cd jaeger-ui && yarn install && npm run build
 	rm -rf jaeger-ui-build && mkdir jaeger-ui-build
-	cp -r jaeger-ui/build $</
+	cp -r jaeger-ui/build jaeger-ui-build/
 
 clean-ui:
 	rm -fr jaeger-ui
