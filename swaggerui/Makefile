@@ -9,7 +9,7 @@ swagger_ui_resources.go: swagger-ui
 	go-bindata -nomemcopy -o $@ -prefix ${PWD}/swagger-ui -pkg swaggerui $</...
 
 swagger-ui:
-	curl -sSL https://github.com/swagger-api/swagger-ui/archive/v3.0.14.zip > /tmp/swagger-ui.zip
+	curl -sSL https://github.com/swagger-api/swagger-ui/archive/v3.2.2.zip > /tmp/swagger-ui.zip
 	mkdir -p $@
 	unzip /tmp/swagger-ui.zip swagger-ui-*/dist/* -d /tmp/swagger-ui
 	mv /tmp/swagger-ui/swagger-ui-*/dist/* swagger-ui/
