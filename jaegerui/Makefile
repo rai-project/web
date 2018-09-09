@@ -12,9 +12,9 @@ checkout-ui:
 	git clone --depth 1 https://github.com/uber/jaeger-ui
 
 jaeger-ui-build:
-	cd jaeger-ui && yarn install && npm run build
+	cd jaeger-ui && yarn install && yarn build
 	rm -rf jaeger-ui-build && mkdir jaeger-ui-build
-	cp -r jaeger-ui/build jaeger-ui-build/
+	cp -r jaeger-ui/packages/jaeger-ui/build jaeger-ui-build/
 
 clean-ui:
 	rm -fr jaeger-ui
