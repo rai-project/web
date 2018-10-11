@@ -12,6 +12,9 @@ type EchoLogger struct {
 	*logrus.Entry
 }
 
+func (l *EchoLogger) SetHeader(string) {
+}
+
 func (l *EchoLogger) SetPrefix(string) {
 }
 func (l *EchoLogger) Prefix() string {
