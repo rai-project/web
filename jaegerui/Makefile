@@ -9,7 +9,7 @@ jaeger_ui_resources.go: jaeger-ui-build
 	go-bindata -nomemcopy -o $@ -prefix ${PWD}/jaeger-ui-build/build -pkg jaegerui $</build/...
 
 checkout-ui:
-	git clone --depth 1 https://github.com/uber/jaeger-ui
+	git clone --depth 1 --branch feature/mlmodelscope https://github.com/rai-project/jaeger-ui
 
 jaeger-ui-build:
 	cd jaeger-ui && yarn install && yarn build
