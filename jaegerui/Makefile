@@ -6,7 +6,7 @@ fmt:
 
 jaeger_ui_resources.go: jaeger-ui-build
 	mkdir -p $(dir $@)
-	go-bindata -nomemcopy -o $@ -prefix ${PWD}/jaeger-ui-build/build -pkg jaegerui $</build/...
+	go generate
 
 checkout-ui:
 	git clone --depth 1 --branch feature/mlmodelscope https://github.com/rai-project/jaeger-ui
